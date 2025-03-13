@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Program5_14
 {
@@ -26,17 +27,25 @@ namespace Program5_14
 
             try
             {
-                inputFile = File.OpenText("NUMBER.txt");
-                while (!inputFile.EndOfStream)
+                if (openFile.ShowDialog() == DialogResult.OK)
                 {
-                    count++;
-                    temp=int.Parse(inputFile.ReadLine());
-                    sum += temp;
-                    listBox1.Items.Add(temp);
+                    inputFile = File.OpenText(openFile.FileName);
+                    while (!inputFile.EndOfStream)
+                    {
+                        count++;
+                        temp = int.Parse(inputFile.ReadLine());
+                        sum += temp;
+                        listBox1.Items.Add(temp);
+                    }
+                    listBox1.Items.Add("總共有" + count + "個數字\n總和:" + sum);
+                    listBox1.Items.Add("總和為" + sum);
+                    inputFile.Close();
                 }
-                listBox1.Items.Add("總共有"+count+"個數字\n總和:"+sum);
-                listBox1.Items.Add("總和為" + sum);
-                inputFile.Close();
+                else
+                {
+                    MessageBox.Show("您按下取消按鈕，程式即將結束。");
+                    this.Close();
+                }
             }
             catch (Exception ex) 
             {
