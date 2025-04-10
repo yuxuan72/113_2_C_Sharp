@@ -1,0 +1,5 @@
+C:\Users\w401\Desktop\113_2_C_Sharp\2025_04_10\Test Average\Test Average\obj\x86\Debug\Test Average.csproj.AssemblyReference.cache
+C:\Users\w401\Desktop\113_2_C_Sharp\2025_04_10\Test Average\Test Average\obj\x86\Debug\Test_Average.Form1.resources
+C:\Users\w401\Desktop\113_2_C_Sharp\2025_04_10\Test Average\Test Average\obj\x86\Debug\Test_Average.Properties.Resources.resources
+C:\Users\w401\Desktop\113_2_C_Sharp\2025_04_10\Test Average\Test Average\obj\x86\Debug\Test Average.csproj.GenerateResource.cache
+C:\Users\w401\Desktop\113_2_C_Sharp\2025_04_10\Test Average\Test Average\obj\x86\Debug\Test Average.csproj.CoreCompileInputs.cache

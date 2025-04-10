@@ -25,10 +25,20 @@ namespace Lottery_Numbers
 
             for (int i = 0; i < lotteryNumbers.Length; i++)
             {
-                // Generate a random number between 1 and 99.
-                lotteryNumbers[i] = rand.Next(1, 43);
+                //產生1到42之間的亂數(包含1和42)，確認產生的亂數沒有與陣列中的數字重複，再放入陣列中
+                int number;
+                do
+                {
+                    number = rand.Next(1, 43); // /產生1到42之間的亂數
+                } while (lotteryNumbers.Contains(number)); // 檢查是否已存在於陣列中
+                lotteryNumbers[i] = number; // 將隨機數字放入陣列中
             }
 
+            //將lotteryNumbers陣列中的數字由小到大排序
+            Array.Sort(lotteryNumbers);// 將陣列中的數字由小到大排序
+
+
+            //註解掉的原始程式碼，逐一將樂透號碼顯示在對應的標籤上
             //firstLabel.Text = lotteryNumbers[0].ToString();
             //secondLabel.Text = lotteryNumbers[1].ToString();
             //thirdLabel.Text = lotteryNumbers[2].ToString();
