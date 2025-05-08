@@ -53,9 +53,9 @@ namespace Password_Validation
         private int NumberDigits(string str)
         {
             int digits = 0;
-            for (int i = 0; i < str.Length; i++)
+            foreach (char c in str)
             {
-                if (char.IsDigit(str[i]))
+                if (char.IsDigit(c))
                 {
                     digits++;
                 }
